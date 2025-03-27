@@ -38,8 +38,7 @@ If you have an idea for a new feature or improvement, please open a **Feature Re
 To download the latest version of MusicDex:
 
 1. Go to the [Releases](https://github.com/duhnnie/MusicDex-Desktop-Releases/releases) section of the repository.
-2. Choose the latest release.
-3. Download the appropriate file for your platform.
+2. Choose the latest release
 
 ---
 
