@@ -1,5 +1,7 @@
 # MusicDex Feedback and Releases
 
+![](./assets/logo.png)
+
 Welcome to the **MusicDex** GitHub repository! This repository is dedicated to tracking feedback, reporting issues, requesting new features, and downloading the latest releases of the app.
 
 ## Purpose
