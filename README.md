@@ -1,20 +1,20 @@
-# MusicDex Feedback and Releases
+# Muxie Feedback and Releases
 
 ![](./assets/logo.png)
 
-Welcome to the **MusicDex** GitHub repository! This repository is dedicated to tracking feedback, reporting issues, requesting new features, and downloading the latest releases of the app.
+Welcome to the **Muxie** GitHub repository! This repository is dedicated to tracking feedback, reporting issues, requesting new features, and downloading the latest releases of the app.
 
 ## Purpose
 
 This repository serves multiple purposes:
 
-- **Report Issues**: If you encounter any bugs or issues while using MusicDex, please report them here by creating a new issue.
+- **Report Issues**: If you encounter any bugs or issues while using Muxie, please report them here by creating a new issue.
 - **Request New Features**: If you have ideas for new features or improvements, feel free to open a feature request.
-- **Download Releases**: This repository will also be used to host the latest releases of MusicDex. You can download the latest version directly from the Releases section.
+- **Download Releases**: This repository will also be used to host the latest releases of Muxie. You can download the latest version directly from the Releases section.
 
 ## Reporting an Issue
 
-If you've found a bug or are experiencing problems with MusicDex, please follow these steps to report the issue:
+If you've found a bug or are experiencing problems with Muxie, please follow these steps to report the issue:
 
 1. Click on the **Issues** tab at the top of the page.
 2. Select **New Issue**.
@@ -35,11 +35,11 @@ If you have an idea for a new feature or improvement, please open a **Feature Re
 
 ## Downloading Releases
 
-To download the latest version of MusicDex:
+To download the latest version of Muxie:
 
-1. Go to the [Releases](https://github.com/duhnnie/MusicDex-Desktop-Releases/releases) section of the repository.
+1. Go to the [Releases](https://github.com/duhnnie/Muxie-Desktop-Releases/releases) section of the repository.
 2. Choose the latest release
 
 ---
 
-If you have any questions, feel free to contact us or open an issue. Thank you for using MusicDex, and we appreciate your feedback!
+If you have any questions, feel free to contact us or open an issue. Thank you for using Muxie, and we appreciate your feedback!
