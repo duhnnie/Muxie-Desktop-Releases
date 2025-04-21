@@ -33,6 +33,14 @@ If you have an idea for a new feature or improvement, please open a **Feature Re
 3. Choose **Feature Request** as the template.
 4. Provide a clear description of the feature or improvement you would like to see.
 
+## Expanding iPod Support
+
+Currently, our app supports the **iPod Classic**.  
+We are exploring the possibility of supporting additional iPod models in future updates.  
+If you would like to help, we may need you to provide some information and a few files from your iPod.
+
+For that read our guide about [Supporting iPod Devices](SUPPORT.md).
+
 ## Downloading Releases
 
 To download the latest version of Muxie:
