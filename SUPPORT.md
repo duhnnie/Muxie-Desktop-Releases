@@ -69,7 +69,7 @@ Once you have gathered all the necessary information and files, please follow th
    - You can also provide a **link to the files** from your device using a file-sharing service like Dropbox or any similar service. Just make sure to include the link in your comment.
 
 2. **Create a new issue**:  
-   If no relevant issue exists, please create a new issue in the Issues section of the repository. You can use the following [link to the Issues section](#) to get started.  
+   If no relevant issue exists, please create a new issue in the Issues section of the repository. You can use the following [link to the Issues section](https://github.com/duhnnie/Muxie-Desktop-Releases/issues) to get started.  
    - When creating the issue, use the **"iPod Support Request"** issue template.  
    - In the issue template, fill in the required fields, including the **link to your files** (provided via a service like Dropbox). This will ensure we can access the necessary information and start working on your request.
 
