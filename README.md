@@ -24,6 +24,10 @@ If you've found a bug or are experiencing problems with Muxie, please follow the
    - Expected behavior vs. actual behavior
    - Any error messages or logs
 
+### Known Issues
+
+You can check for Known Issues [here](./KNOWN_ISSUES.md).
+
 ## Requesting a New Feature
 
 If you have an idea for a new feature or improvement, please open a **Feature Request** issue:
