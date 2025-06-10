@@ -3,7 +3,7 @@
 ## Issue #1: Fake timestamps for old scrobbles
 
 ### Description
-The iPod only keeps track of two things: the total number of plays since the last sync, and the date and time of the most recent play. This means Muxie cannot determine the exact times of earlier plays—only the timestamp of the last one is reliable.
+For each track the iPod keeps track of two things: the total number of plays since the last sync, and the date and time of the most recent play. This means Muxie cannot determine the exact times of earlier plays for that track, only the timestamp of the last one is reliable.
 
 To handle this, Muxie makes an assumption: it treats all previous plays as having occurred consecutively just before the last play. It does this by subtracting the length of the track from the timestamp of the last play to estimate when each earlier play occurred.
 
