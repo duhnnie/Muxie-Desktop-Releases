@@ -2,7 +2,10 @@
 
 ![](./assets/logo.png)
 
-Currently, our app supports the **iPod Classic**.  
+Currently, Muxie supports the [iPod Classic (Late 2019)](https://support.apple.com/en-us/103823#ipod) with software updated to 2.0.4 Mac. The iPod Classic Late 2019 is, according [Wikipedia](https://en.wikipedia.org/wiki/IPod_Classic#Models), 6th generation, and according many users, 7th generation. Currently, support is limited to this particular model. 
+
+While we support the mentioned model, there are still some little known issues, [check them out](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md).
+
 We are exploring the possibility of supporting additional iPod models in future updates. **This excludes any model of iPod Touch**. 
 
 ## What We Need?
