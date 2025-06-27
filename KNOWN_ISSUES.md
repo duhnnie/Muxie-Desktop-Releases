@@ -30,7 +30,51 @@ To prevent this from happening, you can do one of the following:
 Sync your iPod with iTunes after every Muxie sync (this resets the internal play tracking), or
 Manually delete the Play Counts file from your iPod after each Muxie sync.
 
-## Conclusion
+## Issue #3: Incorrect Listen Timestamps Due to Timezone Mismatch
+
+### Description
+
+Muxie may scrobble listens with a timestamp that differs from the original listen time. This happens if the computer running the app is set to a different timezone than the iPod being synced.
+
+iPods store listen records using local time, but they do not include the timezone information along with it. Although we could convert this local time to UTC (which is required for scrobbling), we currently have no reliable way to determine the iPod's timezone automatically.
+As a workaround, Muxie uses the timezone of the host machine to convert iPod timestamps to UTC. If the host machine's timezone is different from the iPod’s, this results in incorrect UTC timestamps when scrobbling.
+
+> If you know of a way to extract the timezone from an iPod, please [open a ticket](https://github.com/duhnnie/Muxie-Desktop-Releases/issues) and share the method along with iPod details (version, firmaware version, etc).
+
+### Example 
+
+**Suppose:**
+
+- **iPod Timezone**: Eastern Standard Time (EST; UTC−5)
+- **Listen Time of a track on iPod**: 3:00 PM EST
+- **Expected UTC Time for Scrobble**: 8:00 PM UTC
+- **Host Machine Timezone**: Pacific Standard Time (PST; UTC−8)
+
+**What happens:**
+
+1. You connect your iPod to your machine, Muxie scans it and get the listen with a timestamp of 3:00 PM (local time), but not the timezone.
+2. Muxie assumes the timestamp is in PST (the timezone of the host machine).
+3. Muxie converts 3:00 PM PST → 11:00 PM UTC.
+4. Muxie scrobbles the listen with time 11:00 PM UTC, instead of the correct 8:00 PM UTC.
+
+**Result:**
+
+The listen is scrobbled 3 hours later than when it actually occurred, due to a timezone mismatch between the iPod and the host machine.
+
+### Workaround
+
+- Set the host machine to the same timezone as the iPod before syncing.
+
+- Be mindful when traveling with a laptop:
+    - macOS and other systems may automatically update the timezone based on your location.
+    - If your iPod remains on its original timezone (e.g., EST), but your Mac switches to a new one (e.g., CET), you'll experience timezone mismatches.
+
+- Verify your machine’s timezone before syncing to ensure consistency with the iPod.
+
+
+## Final Thoughts
 
 - [Issue #2](KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing) may be fixed in a future update by deleting automatically the PlayCount file after syncing.
+
+- [Issue #3](KNOWN_ISSUES.md#issue-3-incorrect-listen-timestamps-due-to-timezone-mismatch) might be fixed if we could extract the timezone from the iPod. If you know how to do it please open a ticket with the info.
 
