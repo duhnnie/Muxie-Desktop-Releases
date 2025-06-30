@@ -6,13 +6,13 @@
 
 Muxie is capable of scrobbling from iPod devices. The currently supported models are:
 
-- [iPod classic (Late 2019)](https://support.apple.com/en-us/103823#ipod) with software updated to 2.0.4 Mac. The iPod Classic Late 2019 is, according [Wikipedia](https://en.wikipedia.org/wiki/IPod_Classic#Models), 6th generation, and according many users, 7th generation. 
+- [iPod classic (Late 2019)](https://support.apple.com/en-us/103823#ipod) with software updated to 2.0.4 Mac formatted. The iPod Classic Late 2019 is, according [Wikipedia](https://en.wikipedia.org/wiki/IPod_Classic#Models), 6th generation, and according many users, 7th generation. 
 
-- **iPod (5th generation)** also known as iPod with video or Fifth Generation iPod
+- **iPod (5th generation)** also known as iPod with video or Fifth Generation iPod. Firmware 1.3 (6.3), Mac formatted.
 
-Currently, support is limited to these particular models.
+Currently, support is limited to these particular models. If your iPod model is supported and is not listed above please let us know.
 
-While we support the mentioned model, there are still some little known issues, [check them out](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md).
+While we support the mentioned models, there are still some little known issues, [check them out](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md).
 
 We are exploring the possibility of supporting additional iPod models in future updates. **This excludes any model of iPod Touch**. 
 

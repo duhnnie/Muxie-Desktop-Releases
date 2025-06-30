@@ -43,7 +43,7 @@ Currently, our app supports the **iPod Classic**.
 We are exploring the possibility of supporting additional iPod models in future updates.  
 If you would like to help, we may need you to provide some information and a few files from your iPod.
 
-For that read our guide about [Supporting iPod Devices](SUPPORT.md).
+For that read our guide about [Supporting iPod Devices](IPOD_SUPPORT.md).
 
 ## Downloading Releases
 
