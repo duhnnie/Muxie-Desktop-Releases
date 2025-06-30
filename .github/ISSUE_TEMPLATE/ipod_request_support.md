@@ -6,7 +6,7 @@ labels: iPod Support
 assignees: ''
 
 ---
-*(First read https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/SUPPORT.md)*
+*(First read https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/IPOD_SUPPORT.md)*
 
 ## iPod Information
 
