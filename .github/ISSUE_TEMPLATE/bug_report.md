@@ -12,10 +12,9 @@ assignees: ''
 
 ### Platform Information
 - **macOS Version**: [e.g., macOS Big Sur 11.7.10]
-- **It was working on your previous macOS installation?**: [Yes, macOS XX / No, macOS XX / I don't know]
 - **App Version**: [e.g., 1.0.0]
 - **Device Model**: [e.g., MacBook Pro (13-inch, 2020)]
-- **Other relevant details**: [e.g., Specific configurations or environments]
+- **Other relevant details**: [e.g., Specific configurations or environments, if it started failing after macOS/Muxie upgrade, do you know which versions?, etc]
 
 ### Reproduction Steps
 [Please provide the steps to reproduce the bug. If possible, include the specific actions or settings that trigger it.]
