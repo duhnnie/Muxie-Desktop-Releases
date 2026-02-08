@@ -85,7 +85,7 @@ If the device logged the plays in a different timezone than the host machine, th
 
 ## 3. Manual Cleanup of `.scrobbler.log` Files
 
-Unlike iPods with original firmware, `.scrobbler.log` files are **not automatically cleared** after importing. Every new listen wil just append a new record to the file. While Muxie's algorithm avoids duplicated listen imports from this file, after some time this could result on a huge file making Muxie need more time to read unnecessary and already-scrobbled records.
+Unlike iPods with original firmware, `.scrobbler.log` files are **not automatically cleared** after importing. Every new listen will just append a new record to the file. While Muxie's algorithm avoids duplicated listen imports from this file, after some time this could result on a huge file making Muxie need more time to read unnecessary and already-scrobbled records.
 
 For that is recommended to remove this file after syncing with Muxie, some implementations (such as Rockbox’s `lastfm_scrobbler` plugin) provide an option in the device UI to clear or delete the log file after export.
 

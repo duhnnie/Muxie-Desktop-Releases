@@ -87,7 +87,7 @@ Once you have gathered all the necessary information and files, please follow th
 
 2. **Create a new issue**:  
    If no relevant issue exists, please create a new issue in the Issues section of the repository. You can use the following [link to the Issues section](https://github.com/duhnnie/Muxie-Desktop-Releases/issues) to get started.  
-   - When creating the issue, use the **"iPod Support Request"** issue template.  
+   - When creating the issue, use the **_iPod Support Request_** issue template.  
    - In the issue template, fill in the required fields, including the **link to your files** (provided via a service like Dropbox). This will ensure we can access the necessary information and start working on your request.
 
 3. **Be patient**:  
@@ -119,7 +119,7 @@ If you’re interested in using Muxie with a portable player that is not current
    - Timestamps
    - Sequential or append-only log files
 
-If you find files that you believe may contain listening data, please **open a ticket** and include:
+If you find files that you believe may contain listening data, please **open a ticket** using the **_Portable Music Player Support_** issue template and include:
 
 - Device brand and model
 - Firmware or software version
