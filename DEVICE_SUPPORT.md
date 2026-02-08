@@ -1,26 +1,32 @@
-# Expanding iPod Support
+# Expanding Device Support
 
 ![](./assets/logo.png)
 
 ## Supported models
 
-Muxie is capable of scrobbling from iPod devices. The currently supported models are:
+Muxie is capable of scrobbling from following devices:
 
 - [iPod classic (Late 2019)](https://support.apple.com/en-us/103823#ipod) with software updated to 2.0.4 Mac formatted. The iPod Classic Late 2019 is, according [Wikipedia](https://en.wikipedia.org/wiki/IPod_Classic#Models), 6th generation, and according many users, 7th generation. 
 
 - **iPod (5th generation)** also known as iPod with video or Fifth Generation iPod. Firmware 1.3 (6.3), Mac formatted.
 
+- Any device capable of generating a [`.scrobbler.log`](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging) file like [Rockbox](https://download.rockbox.org/daily/manual/rockbox-ipod6g/rockbox-buildch12.html#x19-36200012.4.12)-powered devices.
+
 Currently, support is limited to these particular models. If your iPod model is supported and is not listed above please let us know.
 
-While we support the mentioned models, there are still some little known issues, [check them out](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md).
+While we support the mentioned models, there are still some little known issues, [check them out](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md) and [differences in how Muxie work with them](./PORTABLE_DEVICE_DIFFERENCES.md).
 
-We are exploring the possibility of supporting additional iPod models in future updates. **This excludes any model of iPod Touch**. 
+We are exploring the possibility of supporting additional iPod models or other devices in future updates. **This excludes any model of iPod Touch**. 
 
-## What We Need?
+---
+
+## For iPod models running Apple's original software
+
+### What We Need?
 
 If you would like to help, we may need you to provide some information and a few files from your iPod.
 
-### iPod Information
+#### iPod Information
 
 Please provide the following details about your iPod:
 
@@ -29,7 +35,7 @@ Please provide the following details about your iPod:
 - Software version installed on the device (please ensure the device is updated to the latest version available for it)
 - Whether any client (at any time) has been able to **scrobble** songs from this device.
 
-### Files Needed
+#### Files Needed
 
 We will also need some files and information from your iPod.  
 Since we do not know the file structure of all iPod models, we can only provide general guidance:
@@ -61,7 +67,7 @@ Since we do not know the file structure of all iPod models, we can only provide 
 
 > **Note:**  
 > The file structure in other iPod models might be different. Files may have different names, be stored in different locations, or all the needed information could be contained within a single file.  
-> In some cases, certain iPod models might **not store** the necessary information at all — in that situation, unfortunately, we won't be able to support that model.
+> In some cases, certain iPod models might **not store** the necessary information at all, in that situation, unfortunately, we won't be able to support that model.
 
 > If you're unsure about which files to send, feel free to open an Issue in this repository. We'll guide you through the process!
 
@@ -70,7 +76,7 @@ Since we do not know the file structure of all iPod models, we can only provide 
 
 Thank you for being part of this effort!
 
-## How to Provide the Information
+### How to Provide the Information
 
 Once you have gathered all the necessary information and files, please follow these steps to provide them:
 
@@ -89,3 +95,40 @@ Once you have gathered all the necessary information and files, please follow th
    We may need to ask you for further details or clarification. We appreciate your patience and understanding as we evaluate your request and work to expand iPod model support.
 
 Thank you for helping us improve compatibility with additional iPod models!
+
+## Support for other Portable Music Players
+
+Beyond iPods running Apple’s original software and devices that generate a `.scrobbler.log` file, there is a wide variety of portable music players with unknown or undocumented ways of storing play history, if they store it at all.
+
+At this time, there is **no generic guide** for enabling scrobbling support on other portable players. Each device may:
+
+- Store play history in a proprietary format
+- Store only partial play information
+- Not store play history at all
+- Expose logs in unexpected locations or file formats
+
+Because of this, adding support for new devices requires **device-specific investigation**.
+
+If you’re interested in using Muxie with a portable player that is not currently supported, you’re encouraged to:
+
+1. Explore the device’s storage when connected to your computer.
+2. Look for files that may contain play history or listen logs.
+3. Identify anything that resembles:
+   - Track identifiers
+   - Play counts
+   - Timestamps
+   - Sequential or append-only log files
+
+If you find files that you believe may contain listening data, please **open a ticket** and include:
+
+- Device brand and model
+- Firmware or software version
+- File paths and filenames involved
+- Sample files (if possible)
+- Any insights about how or when the data is written
+
+This information is essential to evaluate whether support can be added and how reliable it could be.
+
+Community contributions are especially valuable here, many supported formats start with curious users exploring their devices.
+
+
