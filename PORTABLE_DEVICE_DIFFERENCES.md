@@ -20,11 +20,16 @@ iPods running Apple’s original firmware do **not** store individual play event
 
 As a result:
 
-- Muxie cannot know *exactly when* each individual listen occurred.
+- Muxie cannot know *exactly when* each individual listen occurred, only the timestamp of the last one is reliable.
 - Plays are **condensed** into a single entry per track.
 - In Muxie’s *iPod Scrobbles* section, you may see:
   - One row per track
   - A play count equal or greater than `1`, representing one or multiple listens since the last sync with iTunes/Music app.
+  - Date and time for last play only is displayed
+- How Muxie scrobbles:
+  - Track is scrobbled with displayed date and time (the date and time of last play for that track)
+  - If option for scrobbling repeated plays is on, then Muxie treats all remaninig plays as having occurred consecutively just before the last play. It does this by subtracting the length of the track from the timestamp of the last play to estimate when each earlier play occurred.
+  - As a result, when the tracks are scrobbled, it will look as though you listened to all the songs in a continuous sequence, ending with the most recent play.
 
 This is a limitation of the data provided by the device itself. You may want to read this related know issues: [#1](./KNOWN_ISSUES.md#issue-1-fake-timestamps-for-old-scrobbles) and [#2](./KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing).
 
@@ -43,6 +48,8 @@ As a result:
 - In the *iPod Scrobbles* section, you may see:
   - Multiple rows for the same track
   - Each row with a play count of `1`
+- What Muxie scrobbles:
+  - Each row is scrobbled regardless the existence of many rows with the same track.
 
 This behavior is expected and reflects the higher granularity of the logging format.
 

@@ -17,7 +17,7 @@ Muxie provides an option to scrobble only the most recent listen of a track, usi
 
 When this option is enabled, Muxie ignores the total play count and scrobbles just the last play. This is useful if you want to avoid a series of backdated scrobbles based on assumptions and only care about tracking the most recent time you listened to the song.
 
- You may want to know about [how timezones are determined](./PORTABLE_DEVICE_DIFFERENCES.md#2-how-timestamps-are-determined).
+ You may want to know about [how timezones are determined](./PORTABLE_DEVICE_DIFFERENCES.md#2-how-timestamps-are-determined) and how Muxie work with scrobbles from [iPods with Apple's original software](./PORTABLE_DEVICE_DIFFERENCES.md#ipod-with-apple-original-software) and from [devices that generates `.scrobbler.log` files](./PORTABLE_DEVICE_DIFFERENCES.md#devices-using-scrobblerlog).
 
 ## Issue #2: Duplicate Scrobbles After Syncing
 
