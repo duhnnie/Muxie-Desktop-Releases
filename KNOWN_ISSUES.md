@@ -2,6 +2,8 @@
 
 ## Issue #1: Fake timestamps for old scrobbles
 
+_(Only in iPods with Apple original software)_
+
 ### Description
 For each track the iPod keeps track of two things: the total number of plays since the last sync, and the date and time of the most recent play. This means Muxie cannot determine the exact times of earlier plays for that track, only the timestamp of the last one is reliable.
 
@@ -15,13 +17,17 @@ Muxie provides an option to scrobble only the most recent listen of a track, usi
 
 When this option is enabled, Muxie ignores the total play count and scrobbles just the last play. This is useful if you want to avoid a series of backdated scrobbles based on assumptions and only care about tracking the most recent time you listened to the song.
 
+ You may want to know about [how timezones are determined](./PORTABLE_DEVICE_DIFFERENCES.md#2-how-timestamps-are-determined).
+
 ## Issue #2: Duplicate Scrobbles After Syncing
+
+_(Only in iPods with Apple original software)_
 
 ### Description
 
-Sometimes, multiple scrobbles can result in duplicate entries—scrobbles that have already been submitted. This happens under the following scenario:
+Sometimes, multiple scrobbles can result in duplicate entries/scrobbles that have already been submitted. This happens under the following scenario:
 
-Imagine you listen to Song A on your iPod 5 times. Then, you sync your iPod with Muxie, and everything is scrobbled correctly. After that, you listen to the same song 3 more times. The iPod's internal database updates the play count from 5 to 8. The next time you sync with Muxie, it sees 8 plays in total and scrobbles all of them again—including the 5 that were already submitted.
+Imagine you listen to Song A on your iPod 5 times. Then, you sync your iPod with Muxie, and everything is scrobbled correctly. After that, you listen to the same song 3 more times. The iPod's internal database updates the play count from 5 to 8. The next time you sync with Muxie, it sees 8 plays in total and scrobbles all of them again, including the 5 that were already submitted.
 
 ### Workaround
 
@@ -30,9 +36,13 @@ To prevent this from happening, you can do one of the following:
 Sync your iPod with iTunes after every Muxie sync (this resets the internal play tracking), or
 Manually delete the Play Counts file from your iPod after each Muxie sync.
 
+You may want to know about [how plays are recorded and displayed](./PORTABLE_DEVICE_DIFFERENCES.md#1-how-plays-are-recorded-and-displayed).
+
 ## Issue #3: Incorrect Listen Timestamps Due to Timezone Mismatch
 
-### Description
+### iPods with Apple original software
+
+#### Description
 
 Muxie may scrobble listens with a timestamp that differs from the original listen time. This happens if the computer running the app is set to a different timezone than the iPod being synced.
 
@@ -41,7 +51,7 @@ As a workaround, Muxie uses the timezone of the host machine to convert iPod tim
 
 > If you know of a way to extract the timezone from an iPod, please [open a ticket](https://github.com/duhnnie/Muxie-Desktop-Releases/issues) and share the method along with iPod details (version, firmaware version, etc).
 
-### Example 
+#### Example 
 
 **Suppose:**
 
@@ -61,7 +71,7 @@ As a workaround, Muxie uses the timezone of the host machine to convert iPod tim
 
 The listen is scrobbled 3 hours later than when it actually occurred, due to a timezone mismatch between the iPod and the host machine.
 
-### Workaround
+#### Workaround
 
 - Set the host machine to the same timezone as the iPod before syncing.
 
@@ -71,6 +81,27 @@ The listen is scrobbled 3 hours later than when it actually occurred, due to a t
 
 - Verify your machine’s timezone before syncing to ensure consistency with the iPod.
 
+You may want to know about [how timezones are determined](./PORTABLE_DEVICE_DIFFERENCES.md#2-how-timestamps-are-determined).
+
+---
+
+### For devices with `.scrobbler.log` files
+
+#### Description
+
+Muxie may scrobble listens from a `.scrobbler.log` file with incorrect timestamps when the log entries do **not** include timezone information.
+
+Depending on the Portable Player Logging format (`.scrobbler.log`) implementation for the device, timezone information could be included or not.
+
+When timezone information **is present** in the log entry, Muxie converts the timestamp to UTC correctly and scrobbles it as expected.
+
+However, when timezone information **is not present**, Muxie has no reliable way to determine the timezone in which the listen was originally recorded. In this case, Muxie assumes the timestamp is expressed in the **timezone of the host machine** and uses that timezone to convert the timestamp to UTC before scrobbling.
+
+If the timezone of the host machine differs from the timezone in which the device logged the listens, this results in incorrect UTC timestamps being sent to Last.fm.
+
+You may want to know about [how timezones are determined](./PORTABLE_DEVICE_DIFFERENCES.md#2-how-timestamps-are-determined).
+
+---
 
 ## Final Thoughts
 

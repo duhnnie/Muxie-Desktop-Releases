@@ -37,13 +37,15 @@ If you have an idea for a new feature or improvement, please open a **Feature Re
 3. Choose **Feature Request** as the template.
 4. Provide a clear description of the feature or improvement you would like to see.
 
-## Expanding iPod Support
+## Expanding Device Support
 
-Currently, our app supports the **iPod Classic**.  
-We are exploring the possibility of supporting additional iPod models in future updates.  
-If you would like to help, we may need you to provide some information and a few files from your iPod.
+Currently, our app supports the **iPod Classic** and **iPod Video** running the original Apple's software and **any device capable of generating a .scrobbler.log file** like Rockbox-powered devices. 
 
-For that read our guide about [Supporting iPod Devices](IPOD_SUPPORT.md).
+We are exploring the possibility of supporting additional iPod models in future updates.
+
+If you would like to help, we may need you to provide some information and a few files from your device.
+
+For that read our guide about [Expanding Device Support](DEVICE_SUPPORT.md).
 
 ## Downloading Releases
 
