@@ -39,7 +39,7 @@ If you have an idea for a new feature or improvement, please open a **Feature Re
 
 ## Expanding Device Support
 
-Currently, our app supports the **iPod Classic** and **iPod Video** running the original Apple's software and **any device capable of generating a .scrobbler.log file** like Rockbox-powered devices and some Sony Walkman devices with installed addons/custom firmares (this case last not tested by Muxie developer).
+Currently, our app supports the **iPod Classic** and **iPod Video** running the original Apple's software and **any device capable of generating a .scrobbler.log file** like Rockbox-powered devices and some Sony Walkman devices with installed addons/custom firmares (**this last case was not officially tested by the Muxie developer**).
 
 We are exploring the possibility of supporting additional iPod models (and other portable devices) in future updates.
 
