@@ -6,17 +6,20 @@
 
 Muxie is capable of scrobbling from following devices:
 
-- [iPod classic (Late 2019)](https://support.apple.com/en-us/103823#ipod) with software updated to 2.0.4 Mac formatted. The iPod Classic Late 2019 is, according [Wikipedia](https://en.wikipedia.org/wiki/IPod_Classic#Models), 6th generation, and according many users, 7th generation. 
+- [iPod classic (Late 2019)](https://support.apple.com/en-us/103823#ipod) with software updated to 2.0.4 Mac formatted. The iPod Classic Late 2019 is, according [Wikipedia](https://en.wikipedia.org/wiki/IPod_Classic#Models), 6th generation, and according many users, 7th generation.
 
 - **iPod (5th generation)** also known as iPod with video or Fifth Generation iPod. Firmware 1.3 (6.3), Mac formatted.
 
-- Any device capable of generating a [`.scrobbler.log`](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging) file like [Rockbox](https://download.rockbox.org/daily/manual/rockbox-ipod6g/rockbox-buildch12.html#x19-36200012.4.12)-powered devices.
+- Any device capable of generating a [`.scrobbler.log`](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging) file like:
+  - [Rockbox](https://download.rockbox.org/daily/manual/rockbox-ipod6g/rockbox-buildch12.html#x19-36200012.4.12)-powered devices.
+  - Some (**according some users, NOT tested by the Muxie developer**) Sony Walkman devices with software addons (https://github.com/unknown321/scrobbler) or custom firmwares (https://www.mrwalkman.com/p/walkman-one-for-wm1az.html).
+  - Other devices compatible with `.scrobbler.log` files.
 
 Currently, support is limited to these particular models. If your iPod model is supported and is not listed above please let us know.
 
 While we support the mentioned models, there are still some little known issues, [check them out](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md) and [differences in how Muxie work with them](./PORTABLE_DEVICE_DIFFERENCES.md).
 
-We are exploring the possibility of supporting additional iPod models or other devices in future updates. **This excludes any model of iPod Touch**. 
+We are exploring the possibility of supporting additional iPod models or other devices in future updates. **This excludes any model of iPod Touch**.
 
 ---
 
@@ -37,41 +40,41 @@ Please provide the following details about your iPod:
 
 #### Files Needed
 
-We will also need some files and information from your iPod.  
+We will also need some files and information from your iPod.
 Since we do not know the file structure of all iPod models, we can only provide general guidance:
 
 - First, **please make sure your iPod is updated to the latest software version available** before extracting the files.
 
-- Second, **listen to a few tracks** on your iPod before extracting the files.  
+- Second, **listen to a few tracks** on your iPod before extracting the files.
   - This is important so we have recent listening activity to work with.
-  - Please provide a list of the tracks you listened to, along with an approximate time when you started and finished each track.  
+  - Please provide a list of the tracks you listened to, along with an approximate time when you started and finished each track.
     - If the iPod has a screen, use the device's displayed time.
     - If the iPod does not have a screen, use your local time.
 
-- We need the file that contains the **song database** from your iPod.  
-  - On the iPod Classic, this file is called `iTunesDB`, located at `/iPod_Control/iTunes/`.  
+- We need the file that contains the **song database** from your iPod.
+  - On the iPod Classic, this file is called `iTunesDB`, located at `/iPod_Control/iTunes/`.
   - (Note: The `iPod_Control` folder and its contents might be hidden.)
 
-- We also need the file that stores the **play counts**.  
-  - On the iPod Classic, this file is named `Play Counts`, and it is also located at `/iPod_Control/iTunes/`.  
+- We also need the file that stores the **play counts**.
+  - On the iPod Classic, this file is named `Play Counts`, and it is also located at `/iPod_Control/iTunes/`.
   - (The play count information may be inside the same file as the song database or in a separate file.)
 
-- (Optional) If possible, please also provide the **Preferences** file.  
+- (Optional) If possible, please also provide the **Preferences** file.
   - On the iPod Classic, this file is located at `/iPod_Control/Device/Preferences`.
   - However, in other iPod models, the Preferences file might have a **different name or be located in a different folder**.
   - This file may contain the **timezone configuration** of the iPod, which can help us correctly scrobble tracks using UTC time instead of assuming the iPod's time is local.
 
-- Please include the **original location (full path)** of each file you send.  
+- Please include the **original location (full path)** of each file you send.
   - This will help us replicate a real scenario with the correct file structure during testing.
 
 
-> **Note:**  
-> The file structure in other iPod models might be different. Files may have different names, be stored in different locations, or all the needed information could be contained within a single file.  
+> **Note:**
+> The file structure in other iPod models might be different. Files may have different names, be stored in different locations, or all the needed information could be contained within a single file.
 > In some cases, certain iPod models might **not store** the necessary information at all, in that situation, unfortunately, we won't be able to support that model.
 
 > If you're unsure about which files to send, feel free to open an Issue in this repository. We'll guide you through the process!
 
-> **Reminder:**  
+> **Reminder:**
 > Providing this information and files does **not guarantee** that support for your device will be possible. However, your contribution will help us evaluate and potentially expand compatibility.
 
 Thank you for being part of this effort!
@@ -80,18 +83,18 @@ Thank you for being part of this effort!
 
 Once you have gathered all the necessary information and files, please follow these steps to provide them:
 
-1. **Search for an existing issue**:  
-   Before creating a new issue, please search in the Issues section of the repository to see if anyone has already requested support for the **same iPod model** you have.  
-   - If a relevant issue exists, feel free to **add your information** to that issue.  
+1. **Search for an existing issue**:
+   Before creating a new issue, please search in the Issues section of the repository to see if anyone has already requested support for the **same iPod model** you have.
+   - If a relevant issue exists, feel free to **add your information** to that issue.
    - You can also provide a **link to the files** from your device using a file-sharing service like Dropbox or any similar service. Just make sure to include the link in your comment.
 
-2. **Create a new issue**:  
-   If no relevant issue exists, please create a new issue in the Issues section of the repository. You can use the following [link to the Issues section](https://github.com/duhnnie/Muxie-Desktop-Releases/issues) to get started.  
-   - When creating the issue, use the **_iPod Support Request_** issue template.  
+2. **Create a new issue**:
+   If no relevant issue exists, please create a new issue in the Issues section of the repository. You can use the following [link to the Issues section](https://github.com/duhnnie/Muxie-Desktop-Releases/issues) to get started.
+   - When creating the issue, use the **_iPod Support Request_** issue template.
    - In the issue template, fill in the required fields, including the **link to your files** (provided via a service like Dropbox). This will ensure we can access the necessary information and start working on your request.
 
-3. **Be patient**:  
-   Once your issue is submitted, please allow some time for us to review the information and files you've provided.  
+3. **Be patient**:
+   Once your issue is submitted, please allow some time for us to review the information and files you've provided.
    We may need to ask you for further details or clarification. We appreciate your patience and understanding as we evaluate your request and work to expand iPod model support.
 
 Thank you for helping us improve compatibility with additional iPod models!
