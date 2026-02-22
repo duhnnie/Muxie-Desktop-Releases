@@ -103,7 +103,7 @@ You may want to know about [how timezones are determined](./PORTABLE_DEVICE_DIFF
 
 ---
 
-## Issue 4: Album Artist scrobbling
+## Issue #4: Album Artist scrobbling
 
 Depending on the supported device and the availability of track metadata, _album artist_ information may not be included in the scrobbled track. See [here](./PORTABLE_DEVICE_DIFFERENCES.md) for more details about when this can occur.
 

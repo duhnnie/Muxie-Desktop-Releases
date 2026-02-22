@@ -34,7 +34,7 @@ As a result:
 Additionally:
   - Unlike devices with `.scrobbler.log` support, Muxie is capable of including **album artist** information (if available) in the scrobbled track for supported iPods running Apple's stock software, even though this is not displayed in the application's UI. You might want to check this related [known issue](./KNOWN_ISSUES.md#issue-4-album-artist-scrobbling).
 
-This is a limitation of the data provided by the device itself. You may want to read this related know issues: [#1](./KNOWN_ISSUES.md#issue-1-fake-timestamps-for-old-scrobbles) and [#2](./KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing).
+This is a limitation of the data provided by the device itself. You might want to read this related know issues: [#1](./KNOWN_ISSUES.md#issue-1-fake-timestamps-for-old-scrobbles) and [#2](./KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing).
 
 ---
 
@@ -48,7 +48,7 @@ Devices that generate a `.scrobbler.log` file (Portable Player Logging format) r
 As a result:
 
 - Muxie imports **each listen separately**
-- In the *iPod Scrobbles* section, you may see:
+- In the *iPod Scrobbles* section, you might see:
   - Multiple rows for the same track
   - Each row with a play count of `1`
 - What Muxie scrobbles:
@@ -74,7 +74,7 @@ Muxie handles this by:
 2. Assuming it belongs to the **host machine’s timezone**
 3. Converting it to UTC before scrobbling
 
-If the iPod’s timezone differs from the host machine’s timezone, the resulting scrobble timestamps may be incorrect. You may want to check this related [known issue](./KNOWN_ISSUES.md#ipods-with-apple-original-software).
+If the iPod’s timezone differs from the host machine’s timezone, the resulting scrobble timestamps may be incorrect. You might want to check this related [known issue](./KNOWN_ISSUES.md#ipods-with-apple-original-software).
 
 ---
 
@@ -92,7 +92,7 @@ Muxie behaves as follows:
   - Muxie assumes the timestamp is expressed in the **host machine’s timezone**
   - That timezone is used to convert the timestamp to UTC
 
-If the device logged the plays in a different timezone than the host machine, this can result in shifted scrobble times. You may want to check this related [known issue](./KNOWN_ISSUES.md#for-devices-with-scrobblerlog-files)
+If the device logged the plays in a different timezone than the host machine, this can result in shifted scrobble times. You might want to check this related [known issue](./KNOWN_ISSUES.md#for-devices-with-scrobblerlog-files)
 
 ---
 
