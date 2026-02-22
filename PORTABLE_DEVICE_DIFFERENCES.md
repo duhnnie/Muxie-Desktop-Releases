@@ -31,6 +31,9 @@ As a result:
   - If option for scrobbling repeated plays is on, then Muxie treats all remaninig plays as having occurred consecutively just before the last play. It does this by subtracting the length of the track from the timestamp of the last play to estimate when each earlier play occurred.
   - As a result, when the tracks are scrobbled, it will look as though you listened to all the songs in a continuous sequence, ending with the most recent play.
 
+Additionally:
+  - Unlike devices with `.scrobbler.log` support, Muxie is capable of including **album artist** information (if available) in the scrobbled track for supported iPods running Apple's stock software, even though this is not displayed in the application's UI.
+
 This is a limitation of the data provided by the device itself. You may want to read this related know issues: [#1](./KNOWN_ISSUES.md#issue-1-fake-timestamps-for-old-scrobbles) and [#2](./KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing).
 
 ---
@@ -51,7 +54,10 @@ As a result:
 - What Muxie scrobbles:
   - Each row is scrobbled regardless the existence of many rows with the same track.
 
-This behavior is expected and reflects the higher granularity of the logging format.
+**This behavior is expected and reflects the higher granularity of the logging format.**
+
+Additionally:
+  - Unlike with iPods running Apple's stock software, Muxie is **not capable to include album artist** info in the scrobbled track for for `.scrobbler.log` devices. This is not a limitation of Muxie, but a limitation of the [`.scrobbler.log` v1.1 specification](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging).
 
 ---
 
@@ -119,11 +125,12 @@ This ensures compatibility with Last.fm’s submission requirements and avoids i
 
 | Feature | iPod (Original Software) | `.scrobbler.log` Devices |
 |------|-------------------------|--------------------------|
-| Play granularity | Condensed (count + last play) | One entry per play |
-| Display in Muxie | Single row, play count >= 1 | Multiple rows, play count = 1 |
-| Timestamp source | Local time, no timezone<sup>1</sup> | With or without timezone |
-| Timestamp conversion | Uses host timezone<sup>1</sup> | Uses embedded timezone if present, otherwise host timezone |
-| Post-sync cleanup | Automatic when syncing with iTunes or Music app | Depends on device software |
+| **Play granularity** | Condensed (count + last play) | One entry per play |
+| **Display in Muxie** | Single row, play count >= 1 | Multiple rows, play count = 1 |
+| **Timestamp source** | Local time, no timezone<sup>1</sup> | With or without timezone |
+| **Timestamp conversion** | Uses host timezone<sup>1</sup> | Uses embedded timezone if present, otherwise host timezone |
+| **Post-sync cleanup** | Automatic when syncing with iTunes or Music app | Depends on device software |
+| **Albumt Artist scrobbling** | Yes (if available) | No, [`.scrobbler.log` specification](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging) doesn't include `album artist` |
 
 Understanding these differences will help you interpret your scrobbles correctly and avoid unexpected timestamp or duplication issues.
 
