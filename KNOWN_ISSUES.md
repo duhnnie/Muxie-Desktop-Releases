@@ -51,7 +51,7 @@ As a workaround, Muxie uses the timezone of the host machine to convert iPod tim
 
 > If you know of a way to extract the timezone from an iPod, please [open a ticket](https://github.com/duhnnie/Muxie-Desktop-Releases/issues) and share the method along with iPod details (version, firmaware version, etc).
 
-#### Example 
+#### Example
 
 **Suppose:**
 
@@ -100,6 +100,32 @@ However, when timezone information **is not present**, Muxie has no reliable way
 If the timezone of the host machine differs from the timezone in which the device logged the listens, this results in incorrect UTC timestamps being sent to Last.fm.
 
 You may want to know about [how timezones are determined](./PORTABLE_DEVICE_DIFFERENCES.md#2-how-timestamps-are-determined).
+
+---
+
+## Issue 4: Album Artist scrobbling
+
+Depending on the supported device and the availability of track metadata, _album artist_ information may not be included in the scrobbled track. See [here](./PORTABLE_DEVICE_DIFFERENCES.md) for more details about when this can occur.
+
+Apparently to the Last.fm API documentation (see [track.scrobble](https://www.last.fm/api/show/track.scrobble)), when a track is scrobbled without _album artist_ information, Last.fm assumes that the provided _artist_ value is also the _album artist_. This can result in imprecise or incorrect track submissions.
+
+For example, consider the song "Airplanes" by B.o.B and Hayley Williams. If the track is scrobbled with the following metadata:
+
+- Track: `Airplanes`
+- Artist: `B.o.B (feat. Hayley Williams)`
+- Album: `B.o.B Presents: The Adventures of Bobby Ray`
+- Album Artist: _[missing]_
+
+Last.fm will assume the _album artist_ is `B.o.B (feat. Hayley Williams)`, which is incorrect.
+
+For this reason, in collaborations the featured artist is typically included in the track title instead, as shown below:
+
+- Track: `Airplanes (feat. Hayley Williams)`
+- Artist: `B.o.B`
+- Album: `B.o.B Presents: The Adventures of Bobby Ray`
+- Album Artist: _[missing]_
+
+In this case, Last.fm will assume the _artist_ (`B.o.B`) is also the _album artist_, which is correct for this release.
 
 ---
 

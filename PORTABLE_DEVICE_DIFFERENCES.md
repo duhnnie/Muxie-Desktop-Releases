@@ -32,7 +32,7 @@ As a result:
   - As a result, when the tracks are scrobbled, it will look as though you listened to all the songs in a continuous sequence, ending with the most recent play.
 
 Additionally:
-  - Unlike devices with `.scrobbler.log` support, Muxie is capable of including **album artist** information (if available) in the scrobbled track for supported iPods running Apple's stock software, even though this is not displayed in the application's UI.
+  - Unlike devices with `.scrobbler.log` support, Muxie is capable of including **album artist** information (if available) in the scrobbled track for supported iPods running Apple's stock software, even though this is not displayed in the application's UI. You might want to check this related [known issue](./KNOWN_ISSUES.md#issue-4-album-artist-scrobbling).
 
 This is a limitation of the data provided by the device itself. You may want to read this related know issues: [#1](./KNOWN_ISSUES.md#issue-1-fake-timestamps-for-old-scrobbles) and [#2](./KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing).
 
@@ -57,7 +57,7 @@ As a result:
 **This behavior is expected and reflects the higher granularity of the logging format.**
 
 Additionally:
-  - Unlike with iPods running Apple's stock software, Muxie is **not capable to include album artist** info in the scrobbled track for for `.scrobbler.log` devices. This is not a limitation of Muxie, but a limitation of the [`.scrobbler.log` v1.1 specification](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging).
+  - Unlike with iPods running Apple's stock software, Muxie is **not capable to include album artist** info in the scrobbled track for for `.scrobbler.log` devices. This is not a limitation of Muxie, but a limitation of the [`.scrobbler.log` v1.1 specification](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging). You might want to check this related [known issue](./KNOWN_ISSUES.md#issue-4-album-artist-scrobbling).
 
 ---
 
@@ -136,3 +136,4 @@ Understanding these differences will help you interpret your scrobbles correctly
 
 ---
 <sup>1</sup> _While we are not able to determine which file from iPod's original software contains that information. If you know it please let us know opening a [new issue](https://github.com/duhnnie/Muxie-Desktop-Releases/issues)._
+
