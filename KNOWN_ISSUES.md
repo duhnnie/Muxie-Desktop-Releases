@@ -33,8 +33,9 @@ Imagine you listen to Song A on your iPod 5 times. Then, you sync your iPod with
 
 To prevent this from happening, you can do one of the following:
 
-Sync your iPod with iTunes after every Muxie sync (this resets the internal play tracking), or
-Manually delete the Play Counts file from your iPod after each Muxie sync.
+- Sync your iPod with iTunes after every Muxie sync (this resets the internal play tracking), or
+- Manually delete the Play Counts file from your iPod after each Muxie sync.
+- Since Muxie v2.1.0 an experimental option for automatically deleting `Play Counts` and `.scrobbler.log` was added, you can enable those options so Muxie will delete them after each sync. More info [here](./ABOUT_RESET_PLAYBACK_LOGS.md).
 
 You may want to know about [how plays are recorded and displayed](./PORTABLE_DEVICE_DIFFERENCES.md#1-how-plays-are-recorded-and-displayed).
 
