@@ -1,5 +1,7 @@
 # Muxie's Known Issues
 
+![](./assets/logo.png)
+
 ## Issue #1: Fake timestamps for old scrobbles
 
 _(Only in iPods with Apple original software)_

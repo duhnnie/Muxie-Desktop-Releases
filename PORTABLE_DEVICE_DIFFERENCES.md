@@ -1,5 +1,7 @@
 # Scrobbling Differences: iPod (Original Software) vs `.scrobbler.log` Devices
 
+![](./assets/logo.png)
+
 Muxie supports scrobbling listens from portable music players in two distinct ways:
 
 1. **Direct scanning of iPods running Apple’s original firmware**

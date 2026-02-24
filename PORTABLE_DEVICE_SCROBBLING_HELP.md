@@ -1,10 +1,12 @@
 # Portable Devices Scrobbling - Help
 
+![](./assets/logo.png)
+
 ## Overview
 
 Muxie supports two portable listening sources:
 
-- **iPod Classic running Apple’s original firmware**  
+- **iPod Classic running Apple’s original firmware**
   These devices do **not** log every play individually. They store only the *last play time* and a cumulative *play count*.
 
 - **Devices with `.scrobbler.log` support**
@@ -35,10 +37,10 @@ Click [here](./PORTABLE_DEVICE_DIFFERENCES.md) for more information.
 
 ## Timestamps & Timezones
 
-- iPods store local timestamps **without timezone information**.  
+- iPods store local timestamps **without timezone information**.
   Muxie assumes the host computer’s timezone, which can cause shifted times if the device used a different timezone.
 
-- For `.scrobbler.log` files, timezone information may be included.  
+- For `.scrobbler.log` files, timezone information may be included.
   If not present, the host timezone is assumed.
 
 ---
@@ -47,7 +49,7 @@ Click [here](./PORTABLE_DEVICE_DIFFERENCES.md) for more information.
 
 ### 1. Estimated Timestamps on Older Plays (iPod running Apple original firmware)
 
-Earlier plays do not have real timestamps, they are estimated based on track duration.  
+Earlier plays do not have real timestamps, they are estimated based on track duration.
 
 Click [here](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md#issue-1-fake-timestamps-for-old-scrobbles) for more information.
 
@@ -71,7 +73,7 @@ Click [here](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_I
 
 ### 4. Missing Album Artist Information
 
-Some devices do not include album artist metadata. 
+Some devices do not include album artist metadata.
 
 Click [here](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md#issue-4-album-artist-scrobbling) for more information
 
@@ -81,5 +83,5 @@ Click [here](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_I
 
 For complete details and technical explanations:
 
-- https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/PORTABLE_DEVICE_DIFFERENCES.md  
+- https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/PORTABLE_DEVICE_DIFFERENCES.md
 - https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md
