@@ -68,7 +68,7 @@ Additionally:
 ### iPod with Apple Original Software
 
 - The iPod stores timestamps in **local time**, without timezone information.
-- There is no reliable way to determine the timezone configured on the iPod.
+- There is no (at least for now) reliable way to determine the timezone configured on the iPod.
 
 Muxie handles this by:
 
@@ -82,7 +82,7 @@ If the iPod’s timezone differs from the host machine’s timezone, the resulti
 
 ### `.scrobbler.log` Files
 
-Depending on the Portable Player Logging (`.scrobbler.log`) implementation for the device, timezone information **may or may not be included** in each log entry.
+Depending on the Portable Player Logging (`.scrobbler.log`) implementation for the device, timezone information **may or may not be included** in the log file.
 
 Muxie behaves as follows:
 
@@ -100,9 +100,11 @@ If the device logged the plays in a different timezone than the host machine, th
 
 ## 3. Manual Cleanup of `.scrobbler.log` Files
 
-Unlike iPods with original firmware, `.scrobbler.log` files are **not automatically cleared** after importing. Every new listen will just append a new record to the file. While Muxie's algorithm avoids duplicated listen imports from this file, after some time this could result on a huge file making Muxie need more time to read unnecessary and already-scrobbled records.
+Unlike iPods with original firmware whose `Play Counts` file is cleared at syncing with iTunes/Music app, `.scrobbler.log` files are **not automatically cleared**. Every new listen will just append a new record to the file. While Muxie's algorithm avoids duplicated listen imports from this file, after some time this could result on a huge file making Muxie need more time to read unnecessary and already-scrobbled records.
 
 For that is recommended to remove this file after syncing with Muxie, some implementations (such as Rockbox’s `lastfm_scrobbler` plugin) provide an option in the device UI to clear or delete the log file after export.
+
+NOTE: starting with Muxie v2.1.0, a feature for "reset playback log" is available in order to clear playback logs after syncing device with Muxie. More info [here](ABOUT_RESET_PLAYBACK_LOGS.md).
 
 ---
 
