@@ -134,7 +134,7 @@ In this case, Last.fm will assume the _artist_ (`B.o.B`) is also the _album arti
 
 ## Final Thoughts
 
-- [Issue #2](KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing) may be fixed in a future update by deleting automatically the PlayCount file after syncing.
+- [Issue #2](KNOWN_ISSUES.md#issue-2-duplicate-scrobbles-after-syncing) can be prevented by deleting the `Play Counts` file after every sync with Muxie. Ways to do that? check this [doc](ABOUT_RESET_PLAYBACK_LOGS.md).
 
-- [Issue #3](KNOWN_ISSUES.md#issue-3-incorrect-listen-timestamps-due-to-timezone-mismatch) might be fixed if we could extract the timezone from the iPod. If you know how to do it please open a ticket with the info.
+- [Issue #3](KNOWN_ISSUES.md#issue-3-incorrect-listen-timestamps-due-to-timezone-mismatch): for iPod running Apple stock firmware it might be fixed if we could extract the timezone from the iPod. If you know how to do it please open a ticket with the info. For `.scrobbler.log` devices it will depend on the specific implementation for that device.
 
