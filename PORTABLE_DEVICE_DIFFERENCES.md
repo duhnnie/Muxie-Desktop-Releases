@@ -134,7 +134,7 @@ This ensures compatibility with Last.fm’s submission requirements and avoids i
 | **Timestamp source** | Local time, no timezone<sup>1</sup> | With or without timezone |
 | **Timestamp conversion** | Uses host timezone<sup>1</sup> | Uses embedded timezone if present, otherwise host timezone |
 | **Post-sync cleanup** | Automatic when syncing with iTunes or Music app | Depends on device software |
-| **Albumt Artist scrobbling** | Yes (if available) | No, [`.scrobbler.log` specification](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging) doesn't include `album artist` |
+| **Albumt Artist scrobbling** | Yes (if available) | No, [`.scrobbler.log` specification](https://web.archive.org/web/20170107015006/http://www.audioscrobbler.net/wiki/Portable_Player_Logging) doesn't include `album artist`. In that case Last.fm use the `artist` field as the `album artist`, which can cause inaccuracies in cases like various-artist compilations. |
 
 Understanding these differences will help you interpret your scrobbles correctly and avoid unexpected timestamp or duplication issues.
 
