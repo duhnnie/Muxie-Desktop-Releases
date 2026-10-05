@@ -130,6 +130,20 @@ For this reason, in collaborations the featured artist is typically included in 
 
 In this case, Last.fm will assume the _artist_ (`B.o.B`) is also the _album artist_, which is correct for this release.
 
+## Issue #5: iPod Connected but No Tracks Are Extracted
+
+### Description
+
+In some cases, Muxie detects the connected iPod correctly, but no tracks are extracted from it.
+
+The most common cause is that the iPod has Automatic Sync enabled in iTunes or the Music app. When the iPod is connected, iTunes/Music may automatically sync it before Muxie has a chance to read its playback information. As part of the sync process, the iPod's play count data can be read and reset, leaving Muxie with no tracks to scrobble.
+
+### Workaround
+
+Disable Automatic Sync for the iPod in iTunes or the Music app, then connect the iPod again and let Muxie read its playback information before performing a sync.
+
+If you want to continue syncing your iPod with iTunes/Music, make sure to disable automatic syncing and perform the sync manually after Muxie has extracted your tracks
+
 ---
 
 ## Final Thoughts

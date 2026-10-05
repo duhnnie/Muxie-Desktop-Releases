@@ -79,6 +79,14 @@ Click [here](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_I
 
 ---
 
+### 5. iPod Connected but No Tracks Are Extracted
+
+In some cases, Muxie detects the connected iPod correctly, but no tracks are extracted from it.
+
+Click [here](https://github.com/duhnnie/Muxie-Desktop-Releases/blob/main/KNOWN_ISSUES.md#issue-5-ipod-connected-but-no-tracks-are-extracted) for more information.
+
+---
+
 ## Full Documentation
 
 For complete details and technical explanations:
